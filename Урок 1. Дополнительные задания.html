@@ -1,0 +1,87 @@
+﻿<!-- 
+    1. По координатам двух точек, которые вводит пользователь, определить уравнение прямой, проходящей через эти точки.
+    Общий вид уравнения: y = kx1 + b; где k = (y1 - y2) / (x1 - x2), b = y2 - k*x2.
+    
+    2. Обменять значения двух переменных, используя третью (буферную) переменную.
+    
+    3. Объявите две переменные: admin и name. Запишите в name строку "Василий". Замените значение из name в admin. Выведите admin.
+    
+    4. Получить от пользователя данные о пользователе: имя, фамилию, возраст. Обработать их и вывести на экран.
+    
+    5. Запросите у пользователя его возраст, после чего выведите на экран модальное окно с вопросом: "Ваш возраст ...(введеное пользователем число) лет?". Далее в зависимости от выбора пользователя выводится модальное окно с информацией true или false.
+-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+<!--3.-->
+    <script type="text/javascript">
+        var name = "Василий";
+        var admin = "user";
+
+        var admin = name;
+        console.log(admin);
+    </script> 
+
+
+<!--4.-->
+    <script type="text/javascript">
+        var name = prompt("Напишите ваше имя");
+        document.write(name + '<br/>');
+
+        var lastname = prompt("Напишите вашу фамилию");
+        document.write(lastname + '<br/>');
+
+        var age = prompt("Укажите ваш возраст");
+        document.write(age + '<br/>');
+    </script>
+
+
+<!--2.-->
+    <script>
+        var a = 1;
+        var b = 2;
+
+        var c; // буфеная переменная
+
+        c = a;
+
+        a = b;
+
+        b = c;
+    </script>
+
+
+<!--5.-->
+    <script>
+        var age = prompt("Укажите ваш возраст");
+        var question = confirm("Ваш возраст " + age + "?");
+
+        alert(question);
+    </script>
+          
+
+<!--1.-->
+    <script>
+        var y1 = +prompt('введите y1');
+        var y2 = +prompt('введите у2');
+        var x1 = +prompt('введите х1');
+        var x2 = +prompt('введите х2');
+
+        var k = (y1 - y2) / (x1 - x2);
+        var b = y2 - k*x2;
+
+        console.log(k*x1 + b);
+    </script>
+
+</head>
+
+<body>
+<ul>
+	<li></li>
+	<li></li>
+</ul>
+</body>
+</html>
